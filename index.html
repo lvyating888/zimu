@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./js/function.js"></script>
+	<script src="./js/index.js"></script>
+	<script>
+	$(function(){
+		var start=$('.start')[0];
+		//console.log(start)
+		var box=$('.box')[0];
+			// console.log(box)
+		var pause=$('.pause')[0];
+		var grade=$('.grade')[0];
+		new game(box,start,pause,grade);
+		var stop=$('.stop')[0];
+
+		stop.onclick=function(){
+				// console.log(box)
+			 history.go(0);	
+		}
+	})
+
+	</script>
+</head>
+<style>
+	body,ul,li{
+		margin:0;
+		padding:0;
+		list-style: none;
+	}
+	body,html{
+		height:100%;
+		overflow: hidden;
+	}
+	.box{
+		width:100%;
+		height: 100%;
+		background: red;
+		position: relative;
+		background:url("./img/1.jpg")no-repeat center center ;
+		background-size: cover;
+	}
+	.start{
+		position: absolute;
+		top:10px;
+		width:250px;
+		height: 70px;
+		background:url("./img/start.png")no-repeat center center ; 
+	}
+	.pause{
+		position: absolute;
+		top:80px;
+		width:250px;
+		height: 70px;
+		background:url("./img/pause.png")no-repeat center center ; 
+	}
+	.goon{
+		position: absolute;
+		top:80px;
+		width:250px;
+		height: 70px;
+		background:url("./img/goon.png")no-repeat -6px -3px; 
+	}
+	.stop{
+		position: absolute;
+		top:150px;
+		width:250px;
+		height: 70px;
+		background:url("./img/stop.png")no-repeat center center ; 
+		/*background-size: cover;*/
+	}
+	.grade{
+		position: absolute;
+		top:0;
+		right: 10px;
+		width:130px;
+		height:103px;
+		background:url("./img/grade4.png")no-repeat center center ; 
+		background-size: cover;
+		text-align: center;
+		line-height: 120px;
+		font-size: 50px;
+		color:#fff;
+
+	}
+</style>
+<body>
+	<div class="box">
+
+		<div class="start">
+			
+		</div>
+		<div class="pause">
+			
+		</div>
+		<div class="stop">
+			
+		</div>
+		<div class="grade">
+			
+		</div>
+	</div>
+</body>
+</html>
